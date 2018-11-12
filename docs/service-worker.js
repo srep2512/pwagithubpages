@@ -1,53 +1,29 @@
-// Initialize required variables - Cache Assets
-var shellCacheName = "pwa-todo-v1";
-var filesToCache = [
-  "./",
-  "./index.html",
-  "./content/css/screen.min.css",
-  "./content/js/app.js",
-  "https://cdn.jsdelivr.net/npm/vue",
-  "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-];
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
 
-// Listen to installation event
-self.addEventListener("install", function(e) {
-  //console.log("[ServiceWorker] Install");
-  e.waitUntil(
-    caches.open(shellCacheName).then(function(cache) {
-      console.log("[ServiceWorker] Caching app shell");
-      return cache.addAll(filesToCache);
-    })
-  );
-});
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
-// Listen to activation event - Update Assets Cache
-self.addEventListener("activate", function(e) {
-  //console.log("[ServiceWorker] Activate");
-  e.waitUntil(
-    // Get all cache containers
-    caches.keys().then(function(keyList) {
-      return Promise.all(
-        keyList.map(function(key) {
-          // Check and remove invalid cache containers
-          if (key !== shellCacheName) {
-            //console.log("[ServiceWorker] Removing old cache", key);
-            return caches.delete(key);
-          }
-        })
-      );
-    })
-  );
+importScripts(
+  "/pwagithubpages/precache-manifest.08011789a94038eed4f5cac7c3d17306.js"
+);
 
-  // Enforce immediate scope control
-  return self.clients.claim();
-});
+workbox.core.setCacheNameDetails({prefix: "fapp"});
 
-// Listen to fetching event - Serve App Shell Offline From Cache
-self.addEventListener("fetch", function(e) {
-  //console.log("[ServiceWorker] Fetch", e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
-});
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
