@@ -12,15 +12,15 @@ self.__precacheManifest = [
     "url": "/pwagithubpages/js/chunk-vendors.272e5479.js"
   },
   {
-    "revision": "fb6226d48543683b0663",
-    "url": "/pwagithubpages/js/app.bd32272d.js"
+    "revision": "84fdd729740b4e1dc328",
+    "url": "/pwagithubpages/js/app.2360a08d.js"
   },
   {
     "revision": "0a7712fafb6e63d122ba",
     "url": "/pwagithubpages/js/about.74e759b6.js"
   },
   {
-    "revision": "a29f6d8ecc9ec5548e1ca36e6d27f66d",
+    "revision": "03a997d1b9c9126f48613b1859358647",
     "url": "/pwagithubpages/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/pwagithubpages/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "fb6226d48543683b0663",
+    "revision": "84fdd729740b4e1dc328",
     "url": "/pwagithubpages/css/app.4912ae7b.css"
   }
 ];

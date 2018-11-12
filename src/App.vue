@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="http://faranto.esn-germany.de/sites/faranto.esn-germany.de/files/styles/zoom/public/events/images/44672360_1866279853486820_247610731539726336_o_0.jpg"></img>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
