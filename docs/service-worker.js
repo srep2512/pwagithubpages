@@ -23,6 +23,13 @@ workbox.core.setCacheNameDetails({prefix: "fapp"});
       cacheName: 'api',
     }),
   );
+
+  workbox.routing.registerRoute(
+    new RegExp('https://srep2512.github.io/pwagithubpages/'),
+    workbox.strategies.cacheFirst({
+      cacheName: 'faranto',
+    }),
+  );
   
   workbox.routing.registerRoute(
     new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
