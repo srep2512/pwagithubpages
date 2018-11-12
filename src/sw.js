@@ -1,19 +1,10 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
-
-importScripts(
-  "/pwagithubpages/precache-manifest.ac6532c55147ab6ee8304dbfe6c65bcf.js"
-);
 
 workbox.core.setCacheNameDetails({prefix: "fapp"});
-
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
-workbox.setConfig({
-  debug: false,
-});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
