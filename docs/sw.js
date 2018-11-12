@@ -1,3 +1,5 @@
+importScripts("/pwagithubpages/precache-manifest.8b5918c7179ac182b1d5d05bd2069ee1.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
 workbox.setConfig({
     debug: false,
   });

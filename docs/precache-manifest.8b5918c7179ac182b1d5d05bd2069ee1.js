@@ -1,9 +1,5 @@
 self.__precacheManifest = [
   {
-    "revision": "d531d98a7f96871dd9c023a64fe71cfb",
-    "url": "/pwagithubpages/sw.js"
-  },
-  {
     "revision": "735ab4f94fbcd57074377afca324c813",
     "url": "/pwagithubpages/robots.txt"
   },
@@ -20,7 +16,7 @@ self.__precacheManifest = [
     "url": "/pwagithubpages/js/about.74e759b6.js"
   },
   {
-    "revision": "03a997d1b9c9126f48613b1859358647",
+    "revision": "fb2ba00e94e7a76a54a21a272668eb4a",
     "url": "/pwagithubpages/index.html"
   },
   {
