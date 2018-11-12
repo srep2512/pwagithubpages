@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/pwagithubpages/js/about.74e759b6.js"
   },
   {
-    "revision": "03a997d1b9c9126f48613b1859358647",
+    "revision": "0cd45289132a779bef07410a2e82ec72",
     "url": "/pwagithubpages/index.html"
   },
   {
