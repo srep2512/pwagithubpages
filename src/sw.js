@@ -16,7 +16,7 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  new RegExp('http://faranto.esn-germany.de/'),
+  new RegExp('http://faranto.esn-germany.de/(.*)'),
   workbox.strategies.cacheFirst({
     cacheName: 'api',
   }),
