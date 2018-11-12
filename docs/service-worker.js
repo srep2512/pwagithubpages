@@ -3,7 +3,7 @@ workbox.setConfig({modulePathPrefix: "/pwagithubpages/workbox-v3.6.3"});
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pwagithubpages/precache-manifest.ac6532c55147ab6ee8304dbfe6c65bcf.js"
+  "/pwagithubpages/precache-manifest.b9bedb1ec288585e5cda4fe2d6c6613b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "fapp"});
