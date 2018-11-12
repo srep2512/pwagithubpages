@@ -1,9 +1,10 @@
  
-
+workbox.core.setCacheNameDetails({prefix: "fapp"});
   
   workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
-    workbox.strategies.staleWhileRevalidate({
+    
+    workbox.strategies.cacheFirst({
       cacheName: 'images',
       plugins: [
         new workbox.expiration.Plugin({
@@ -16,7 +17,7 @@
   
   workbox.routing.registerRoute(
     new RegExp('http://faranto.esn-germany.de/'),
-    workbox.strategies.networkFirst({
+    workbox.strategies.cacheFirst({
       cacheName: 'api',
     }),
   );

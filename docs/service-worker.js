@@ -1,11 +1,12 @@
 importScripts("/pwagithubpages/precache-manifest.b9bedb1ec288585e5cda4fe2d6c6613b.js", "/pwagithubpages/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/pwagithubpages/workbox-v3.6.3"});
+ 
 workbox.core.setCacheNameDetails({prefix: "fapp"});
-
   
   workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
-    workbox.strategies.staleWhileRevalidate({
+    
+    workbox.strategies.cacheFirst({
       cacheName: 'images',
       plugins: [
         new workbox.expiration.Plugin({
@@ -18,7 +19,7 @@ workbox.core.setCacheNameDetails({prefix: "fapp"});
   
   workbox.routing.registerRoute(
     new RegExp('http://faranto.esn-germany.de/'),
-    workbox.strategies.networkFirst({
+    workbox.strategies.cacheFirst({
       cacheName: 'api',
     }),
   );
