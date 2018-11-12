@@ -4,7 +4,7 @@ workbox.setConfig({modulePathPrefix: "/pwagithubpages/workbox-v3.6.3"});
 workbox.core.setCacheNameDetails({prefix: "fapp"});
   
   workbox.routing.registerRoute(
-    /\.(?:png|gif|jpg|jpeg|svg)$/,
+    /\.(?:png|gif|jpg|jpeg|svg|css|js|html)$/,
     
     workbox.strategies.cacheFirst({
       cacheName: 'images',
@@ -25,7 +25,7 @@ workbox.core.setCacheNameDetails({prefix: "fapp"});
   );
 
   workbox.routing.registerRoute(
-    new RegExp('https://srep2512.github.io/pwagithubpages/'),
+    new RegExp('pwagithubpages/'),
     workbox.strategies.cacheFirst({
       cacheName: 'faranto',
     }),
