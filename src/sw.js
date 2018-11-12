@@ -1,3 +1,10 @@
+console.log('this is my custom service worker');
+
+workbox.core.setCacheNameDetails({prefix: "heliowiki"});
+
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.setConfig({
     debug: false,
   });

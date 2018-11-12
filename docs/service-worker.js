@@ -1,5 +1,12 @@
-importScripts("/pwagithubpages/precache-manifest.8b5918c7179ac182b1d5d05bd2069ee1.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/pwagithubpages/precache-manifest.36a33dfa91cda241e0a3a83b24a1aa72.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
+console.log('this is my custom service worker');
+
+workbox.core.setCacheNameDetails({prefix: "heliowiki"});
+
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.setConfig({
     debug: false,
   });
