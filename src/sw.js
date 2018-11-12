@@ -1,7 +1,16 @@
-console.log('this is my custom service worker');
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
-workbox.core.setCacheNameDetails({prefix: "heliowiki"});
+importScripts(
+  "/pwagithubpages/precache-manifest.ac6532c55147ab6ee8304dbfe6c65bcf.js"
+);
 
+workbox.core.setCacheNameDetails({prefix: "fapp"});
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

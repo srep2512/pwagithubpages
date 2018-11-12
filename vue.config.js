@@ -4,7 +4,7 @@ module.exports = {
     : '/'
     ,
     pwa: {
-      name: 'My App',
+      name: 'fapp',
       theme_color: '#4DBA89',
       msTileColor: '#000000',
       appleMobileWebAppCapable: 'yes',
@@ -15,7 +15,8 @@ module.exports = {
       workboxOptions: {
         // swSrc is required in InjectManifest mode.
         swSrc: 'src/sw.js',
-        swDest: "service-worker.js"
+        swDest: "service-worker.js",
+        importWorkboxFrom: "local"
         // ...other Workbox options...
       }
     }
