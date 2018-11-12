@@ -3,7 +3,7 @@ workbox.setConfig({modulePathPrefix: "/pwagithubpages/workbox-v3.6.3"});
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pwagithubpages/precache-manifest.b9bedb1ec288585e5cda4fe2d6c6613b.js"
+  "/pwagithubpages/precache-manifest.ac6532c55147ab6ee8304dbfe6c65bcf.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "fapp"});
@@ -13,12 +13,13 @@ workbox.core.setCacheNameDetails({prefix: "fapp"});
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
+workbox.setConfig({
+  debug: false,
+});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-workbox.setConfig({
-    debug: false,
-  });
+
   
   workbox.precaching.precacheAndRoute([]);
   

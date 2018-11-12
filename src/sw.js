@@ -11,12 +11,13 @@ workbox.core.setCacheNameDetails({prefix: "fapp"});
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
+workbox.setConfig({
+  debug: false,
+});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-workbox.setConfig({
-    debug: false,
-  });
+
   
   workbox.precaching.precacheAndRoute([]);
   
